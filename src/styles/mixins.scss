@@ -1,0 +1,7 @@
+@mixin font-class($size, $weight, $height, $color, $align) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+  text-align: $align;
+  color: $color;
+}
