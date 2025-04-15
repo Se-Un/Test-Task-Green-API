@@ -1,4 +1,8 @@
 @use '@styles/index' as *;
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   width: 100%;
   height: 100vh;
@@ -16,7 +20,7 @@ body {
     left: 0;
     width: 100%;
     height: 127px;
-    background: $backgorund-top-context;
+    background: $background-top-context;
   }
 }
 
@@ -30,6 +34,7 @@ body {
   background: $root-background;
   border-radius: 10px;
   overflow: hidden;
+  font-family: $lato;
 }
 
 @media screen and (max-width: 1440px) {

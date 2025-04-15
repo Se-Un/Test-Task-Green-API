@@ -1,0 +1,36 @@
+@use '@styles/index' as *;
+
+.filter {
+  width: 100%;
+  height: 40px;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+
+  .button {
+    width: fit-content;
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 10px;
+    background-color: $sidebar-background;
+    @include font-class(12px, 400, 14px, $font-color, center);
+    transition: 0.3s ease-in-out;
+
+    &:first-of-type {
+      margin-left: 25px;
+    }
+
+    &:hover {
+      scale: 1.2;
+      cursor: pointer;
+    }
+
+    &_active {
+      background-color: $background-top-context;
+      color: $background-body-light;
+    }
+  }
+}

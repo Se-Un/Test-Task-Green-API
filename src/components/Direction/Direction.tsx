@@ -1,9 +1,19 @@
+import React from 'react';
 import styles from './direction.module.scss';
+import HeaderDirection from './HeaderDirection/HeaderDirection';
 
-export default function Direction() {
+type Props = {
+  children: React.ReactNode;
+  path: string;
+}
+
+export default function Direction({children, path}: Props) {
   return (
-    <section className={styles.direction}>
-
-    </section>
+    <main className={styles.direction}>
+      <HeaderDirection location={path} />
+      {
+        children
+      }
+    </main>
   )
 }

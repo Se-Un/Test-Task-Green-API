@@ -1,9 +1,8 @@
 @use '@styles/index' as *;
 
-.direction {
-  width: 480px;
-  height: 100%;
-  background-color: $color-white;
+.chats {
+  width: 100%;
+  margin-top: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;

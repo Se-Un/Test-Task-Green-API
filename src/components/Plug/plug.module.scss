@@ -1,0 +1,21 @@
+@use '@styles/index' as *;
+
+.plug {
+  width: 100%;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: $background-top-context;
+
+  .title {
+    width: 100%;
+    margin: 50px 0 0;
+    font-family: $korataki;
+    @include font-class(32px, 700, 42px, $color-white, center);
+  }
+}
