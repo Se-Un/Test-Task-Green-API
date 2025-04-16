@@ -1,0 +1,70 @@
+@use '@styles/index' as *;
+
+.navigate {
+  width: 64px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-right: 2px solid $default-border;
+  background-color: $sidebar-background;
+  
+  .list {
+    list-style: none;
+    padding: 0;
+    margin: 25px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    
+    .item {
+      scale: 1;
+      transition: 0.2s;
+      
+      &_set:last-of-type {
+        .link {
+            background-color: $color-white;
+            border-radius: 10px;
+        }
+      }
+      
+      &:hover {
+        scale: 1.2;
+        transform: rotate(360deg);
+        transition: transform 0.4s ease-in-out;
+      }
+      
+      .link {
+        display: block;
+        width: 32px;
+        height: 32px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        z-index: 4;
+      }
+      
+      .clue {
+        position: absolute;
+        width: fit-content;
+        padding: 8px;
+        border-radius: 20px;
+        background-color: $background-btn;
+        top: 5px;
+        left: 1px;
+        z-index: 3;
+        opacity: 0;
+        transition: 0.4s ease-in-out;
+        @include font-class($small-font, 400, 17px, $color-white, center);
+      }
+      
+      &:hover > .clue {
+        left: 38px;
+        opacity: 1;
+      }
+    }
+  }
+}

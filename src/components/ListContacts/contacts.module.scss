@@ -1,0 +1,96 @@
+@use '@styles/index' as *;
+
+.list {
+  width: 100%;
+  height: 65vh;
+  padding: 0;
+  margin: 20px 0 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  overflow: hidden;
+  overflow-y: scroll;
+
+  &_gap {
+    gap: 35px;
+  }
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    background-color: $background-body-light;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: $background-body-dark;
+  }
+
+  .item {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition: 0.3s;
+  
+    &:hover {
+      background-color: $background-body-light;
+    }
+  
+    .avatar {
+      width: 60px;
+      height: 60px;
+    }
+  
+    .container {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      border-bottom: 2px solid $default-border;
+  
+      .name {
+        margin: 0;
+        font-family: $lato-bold;
+        @include font-class(22px, 700, 24px, $font-color, start);
+      }
+  
+      .message {
+        margin: 10px 0 0;
+        @include font-class(12px, 600, 20px, $font-color, start);
+  
+        &_display {
+          display: none;
+        }
+      }
+
+      .status {
+        margin: 0;
+        @include font-class(12px, 600, 20px, $font-color, start);
+
+        &_display {
+          display: none;
+        }
+
+      }
+    }
+  
+    .time {
+      margin: 0;
+      margin-bottom: 30px;
+      font-family: $lato-bold;
+      @include font-class(12px, 600, 14px, $font-color, end);
+  
+      &_display {
+        display: none;
+      }
+    }
+  }
+
+}
+

@@ -1,0 +1,10 @@
+@use '@styles/index' as *;
+
+.direction {
+  width: 480px;
+  height: 100%;
+  background-color: $color-white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
